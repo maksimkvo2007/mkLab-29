@@ -1,0 +1,11 @@
+Project Overview:
+This project is a Forest Ecosystem Simulator. It will track how different forest zones change over time due to animal migrations, tree growth, and seasonal weather.
+
+Implementation:
+I will use a std::map to store the data. 
+- The key will be a string representing the forest zone name (like "North Woods" or "River Valley").
+- The value will be a 3-element std::array containing std::list of strings. 
+- The three lists will represent: [1] Trees, [2] Animals, and [3] Weather conditions.
+
+Simulated Events:
+The simulation will run for 25 time periods (representing weeks). During each time period, the program will simulate events like animals moving between zones or trees growing based on the weather conditions. The data will be initially loaded from a text file containing 200 lines of ecosystem data.
