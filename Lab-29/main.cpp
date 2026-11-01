@@ -60,6 +60,9 @@ int main(){
         }
     }
 
+    // Print the final state of the environment
+    cout << "\n=== FINAL ENVIRONMENT STATE ===" << endl;
 
+    return 0;
 
 }
