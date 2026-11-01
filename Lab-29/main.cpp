@@ -45,5 +45,21 @@ int main(){
     
     myForest["North Woods"] = northWoods;
 
+    cout << "=== INITIAL ENVIRONMENT STATE ===" << endl;
+    displayMap(myForest);
+
+    // Begin a time-based simulation for environmental changes
+    int timePeriods = 25;
+    
+    cout << "\n=== STARTING SIMULATION ===" << endl;
+    for (int time = 1; time <= timePeriods; time++) {// For each time period, simulate changes
+            
+        // Print basic update to show time passing
+        if (time == 1 || time == timePeriods) {
+            cout << "Simulating time period " << time << "..." << endl;
+        }
+    }
+
+
 
 }
