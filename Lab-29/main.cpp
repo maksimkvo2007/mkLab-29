@@ -9,6 +9,21 @@ using namespace std;
 
 using ZoneData = array<list<string>, 3>;
 
+// Function to read data from file
+void loadData(map<string, ZoneData>& ecoMap, string fileName) {
+    ifstream inFile(fileName);
+    
+    if (!inFile) {
+        cout << "Error: Cannot open " << fileName << endl;
+        return;
+    }
+    
+    
+    inFile.close();
+    cout << "Data successfully loaded from " << fileName << "!\n\n";
+}
+
+
 // Function to print the map data neatly
 void displayMap(map<string, ZoneData>& ecoMap) {
     // Loop through every zone in the map
