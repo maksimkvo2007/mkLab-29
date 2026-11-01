@@ -33,5 +33,17 @@ void displayMap(map<string, ZoneData>& ecoMap) {
 }
 
 int main(){
+
+    map<string, ZoneData> myForest;
+
+    ZoneData northWoods;
+    northWoods[0].push_back("Pine");
+    northWoods[0].push_back("Oak");
+    northWoods[1].push_back("Deer");
+    northWoods[1].push_back("Bear");
+    northWoods[2].push_back("Sunny");
     
+    myForest["North Woods"] = northWoods;
+
+
 }
