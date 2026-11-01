@@ -58,8 +58,6 @@ int main(){
 
     // Read model data to demonstrate correct file read operations
     loadData(myForest, "forest_data.txt");
-    
-    myForest["North Woods"] = northWoods;
 
     cout << "=== INITIAL ENVIRONMENT STATE ===" << endl;
     displayMap(myForest);
