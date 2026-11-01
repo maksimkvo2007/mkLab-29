@@ -17,7 +17,12 @@ void loadData(map<string, ZoneData>& ecoMap, string fileName) {
         cout << "Error: Cannot open " << fileName << endl;
         return;
     }
-    
+    string zone, tree, animal, weather;
+    while (inFile >> zone >> tree >> animal >> weather) {
+        ecoMap[zone][0].push_back(tree);
+        ecoMap[zone][1].push_back(animal);
+        ecoMap[zone][2].push_back(weather);
+    }
     
     inFile.close();
     cout << "Data successfully loaded from " << fileName << "!\n\n";
