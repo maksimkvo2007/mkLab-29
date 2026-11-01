@@ -1,0 +1,35 @@
+Unit Testing Description:
+I want to test if my `loadData` function reads files correctly. To do this, my test program will create a small text file called "test.txt" with just one line of fake data. Then, it will run the `loadData` function on that file. Finally, it will check if the map successfully loaded that one zone, and print PASS if it worked, or FAIL if it didn't.
+
+Unit Testing Driver Program:
+#include <iostream>
+#include <map>
+#include <array>
+#include <list>
+#include <string>
+#include <fstream>
+
+using namespace std;
+using ZoneData = array<list<string>, 3>;
+
+// (Assume loadData function is declared right here)
+
+int main() {
+    // 1. Make a dummy file to test with
+    ofstream testFile("test.txt");
+    testFile << "MyZone Oak Bear Sunny" << endl;
+    testFile.close();
+
+    // 2. Run our function to test it
+    map<string, ZoneData> testMap;
+    loadData(testMap, "test.txt");
+
+    // 3. Check if it worked
+    if (testMap.size() == 1) {
+        cout << "PASS: The data loaded properly!" << endl;
+    } else {
+        cout << "FAIL: The data did not load." << endl;
+    }
+
+    return 0;
+}
