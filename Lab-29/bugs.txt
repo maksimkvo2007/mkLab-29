@@ -1,0 +1,29 @@
+1. Bug: C++ didn't know what `ifstream` was and threw an error. 
+   Fix: I forgot to put `#include <fstream>` at the very top.
+
+2. Bug: My code only read the very first word of my text file instead of the whole thing.
+   Fix: Put the reading part inside a `while` loop so it keeps going until the end.
+
+3. Bug: Got an "out of range" error when adding weather info.
+   Fix: Forgot arrays start at 0, not 1. Changed index 3 to index 2.
+
+4. Bug: Kept getting a weird type error when adding to the map.
+   Fix: I was trying to add stuff to the array instead of the list inside it. Fixed the brackets.
+
+5. Bug: My test file kept saying my map size was 0.
+   Fix: Realized I forgot to actually run the `loadData()` function first. Oops.
+
+6. Bug: The map wasn't actually updating during the simulation.
+   Fix: I was changing a copy of the data. Added an `&` to my for loop so it changes the real thing.
+
+7. Bug: The terminal got spammed with text.
+   Fix: Added a quick `if` statement so it only prints on weeks 10 and 20.
+
+8. Bug: My week 10 tree never showed up.
+   Fix: Used `=` instead of `==` in my if statement. Fixed it to `if (time == 10)`.
+
+9. Bug: The printed text looked like one giant messy paragraph.
+   Fix: Added a few `\n` and `endl` things to space it out so it looks cleaner.
+
+10. Bug: The program said it couldn't find my text file.
+    Fix: I had a typo and wrote "forestdata.txt" instead of "forest_data.txt".
