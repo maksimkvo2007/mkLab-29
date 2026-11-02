@@ -4,6 +4,8 @@
 #include <list>
 #include <string>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
