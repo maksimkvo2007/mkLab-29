@@ -56,6 +56,8 @@ void displayMap(map<string, ZoneData>& ecoMap) {
 
 int main(){
 
+    srand(time(0));
+
     map<string, ZoneData> myForest;
 
     // Read model data to demonstrate correct file read operations
@@ -64,12 +66,20 @@ int main(){
     cout << "=== INITIAL ENVIRONMENT STATE ===" << endl;
     displayMap(myForest);
 
-    int timePeriods = 3; 
+    int timePeriods = 25;
     
-    cout << "=== STARTING SIMULATION ===" << endl;
+    cout << "\n=== STARTING SIMULATION ===" << endl;
     for (int time = 1; time <= timePeriods; time++) {
-        cout << "Simulating time period " << time << "..." << endl;
-        myForest["NorthWoods"][1].push_back("Fawn"); 
+        
+        if (time == 10) {
+            cout << "  -> Time period 10: Added a Sapling to NorthWoods." << endl;
+            myForest["NorthWoods"][0].push_back("Sapling");
+        }
+        
+        if (time == 20) {
+            cout << "  -> Time period 20: Added a Fox to RiverValley." << endl;
+            myForest["RiverValley"][1].push_back("Fox");
+        }
     }
 
     // Print the final state of the environment
